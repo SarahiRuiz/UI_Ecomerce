@@ -18,7 +18,7 @@ export default function ProductCard({ product }: Props) {
         }}>
         <CardMedia 
             sx={{height: 240, backgroundSize: 'cover'}}
-            image={product.image}
+            image={product.pictureUrl}
             title={product.name}
         />
         <CardContent>
@@ -34,6 +34,9 @@ export default function ProductCard({ product }: Props) {
                 variant="h6" 
                 sx={{color: 'secondary.main'}}>
                 ${product.price.toFixed(2)}
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+                {product.description}
             </Typography>
         </CardContent>
         <CardActions
